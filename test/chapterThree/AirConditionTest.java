@@ -19,25 +19,38 @@ public class AirConditionTest {
     public void turnOnAnAirCondition_ThatOffTest(){
         assertFalse(airCondition.isTurnedOn());
 
-        airCondition.turnOn();
+        airCondition.toggle();
         assertTrue(airCondition.isTurnedOn());
     }
 
     @Test
     public void turnOffAnAirCondition_andMakeSureItGoesOff(){
-        airCondition.turnOn();
-        assertTrue(airCondition.isTurnedOn());
+        assertFalse(airCondition.isTurnedOn());
 
-        airCondition.turnOff();
+        airCondition.toggle();
+        airCondition.toggle();
         assertFalse(airCondition.isTurnedOn());
     }
 
     @Test
     public void increaseTemperature_whenTemperatureIsIncrease(){
-        airCondition.turnOn();
+        assertFalse(airCondition.isTurnedOn());
+        airCondition.toggle();
         assertTrue(airCondition.isTurnedOn());
 
         airCondition.increaseTemp();
         assertEquals(17, airCondition.getTemp());
+    }
+
+    @Test
+    public void decreaseTemperature_whenTemperatureIsDecrease(){
+        assertFalse(airCondition.isTurnedOn());
+        airCondition.toggle();
+        assertTrue(airCondition.isTurnedOn());
+
+        airCondition.increaseTemp(20);
+
+        airCondition.decreaseTemp();
+        assertEquals(19, airCondition.getTemp());
     }
 }

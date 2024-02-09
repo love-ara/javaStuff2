@@ -4,6 +4,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 
 public class AutomaticBikeTest {
     private AutomaticBike bike;
@@ -50,11 +51,13 @@ public class AutomaticBikeTest {
         bike.toggle();
         assertTrue(bike.isEngineOn());
 
-        for(int speed = 1; speed <= 21; speed++) {
+        for(int speed = 1; speed < 21; speed++) {
             bike.accelerate();
         }
-        assertEquals(21, bike.getSpeed());
+        assertEquals(20, bike.getSpeed());
         assertEquals(1, bike.getGear());
+
+        bike.accelerate();
 
         bike.accelerate();
         assertEquals(2, bike.getGear());
@@ -68,7 +71,7 @@ public class AutomaticBikeTest {
         bike.toggle();
         assertTrue(bike.isEngineOn());
 
-        for(int count = 1; count <= 20; count ++){
+        for(int count = 1; count < 21; count ++){
             bike.accelerate();
         }
         assertEquals(20, bike.getSpeed());
@@ -122,7 +125,7 @@ public class AutomaticBikeTest {
     }
 
     @Test
-    void decelerationTest() {
+    public void decelerationTest() {
         assertFalse(bike.isEngineOn());
         bike.toggle();
         assertTrue(bike.isEngineOn());
@@ -137,12 +140,12 @@ public class AutomaticBikeTest {
 
 
     @Test
-    void deceleratesInGearOne_speedDecreasesByOneTest() {
+    public void deceleratesInGearOne_speedDecreasesByOneTest() {
         assertFalse(bike.isEngineOn());
         bike.toggle();
         assertTrue(bike.isEngineOn());
 
-        for (int speed = 0; speed < 16; speed++) {
+        for (int count = 0; count < 16; count++) {
             bike.accelerate();
         }
         assertEquals(16, bike.getSpeed());
@@ -154,26 +157,95 @@ public class AutomaticBikeTest {
     }
 
     @Test
-    void deceleratesInGearTwo_speedDecreasesByTwoTest() {
+    public void deceleratesInGearTwo_speedDecreasesByTwoTest() {
         assertFalse(bike.isEngineOn());
         bike.toggle();
         assertTrue(bike.isEngineOn());
 
-        for (int speed = 1; speed < 21; speed++) {
+        for (int count = 1; count <= 21; count++) {
             bike.accelerate();
         }
-        assertEquals(20, bike.getSpeed());
+        assertEquals(21, bike.getSpeed());
 
         bike.accelerate();
         assertEquals(2, bike.getGear());
-        assertEquals(22, bike.getSpeed());
-
+        assertEquals(23, bike.getSpeed());
 
         bike.decelerate();
-        //assertEquals(2, bike.getGear());
-        assertEquals(22, bike.getSpeed());
+        assertEquals(2, bike.getGear());
+        assertEquals(21, bike.getSpeed());
 
     }
+
+    @Test
+    public void deceleratesInGearThree_speedDecreasesByThreeTest() {
+        assertFalse(bike.isEngineOn());
+        bike.toggle();
+        assertTrue(bike.isEngineOn());
+
+        for(int count = 1; count < 21; count ++){
+            bike.accelerate();
+        }
+        assertEquals(20, bike.getSpeed());
+        assertEquals(1, bike.getGear());
+
+        bike.accelerate();
+
+        for(int count = 1; count < 5; count++) {
+            bike.accelerate();
+        }
+        assertEquals(2, bike.getGear());
+        assertEquals(29, bike.getSpeed());
+
+        bike.accelerate();
+
+        bike.accelerate();
+        bike.decelerate();
+        assertEquals(31, bike.getSpeed());
+        assertEquals(3, bike.getGear());
+    }
+
+    @Test
+    public void deceleratesInGearFour_speedDecreasesByFourTest() {
+        assertFalse(bike.isEngineOn());
+        bike.toggle();
+        assertTrue(bike.isEngineOn());
+
+        for (int count = 1; count < 21; count++) {
+            bike.accelerate();
+        }
+        assertEquals(1, bike.getGear());
+        assertEquals(20, bike.getSpeed());
+
+        bike.accelerate();
+
+        for (int count = 1; count < 5; count++) {
+            bike.accelerate();
+        }
+        assertEquals(2, bike.getGear());
+        assertEquals(29, bike.getSpeed());
+
+        bike.accelerate();
+
+        for (int count = 1; count < 3; count++) {
+            bike.accelerate();
+        }
+        assertEquals(3, bike.getGear());
+        assertEquals(37, bike.getSpeed());
+
+        bike.accelerate();
+
+        bike.accelerate();
+        assertEquals(4, bike.getGear());
+        assertEquals(43, bike.getSpeed());
+
+        bike.decelerate();
+        assertEquals(3, bike.getGear());
+        assertEquals(39, bike.getSpeed());
+    }
+
+
+
 
 
 }

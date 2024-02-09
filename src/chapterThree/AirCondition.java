@@ -2,18 +2,17 @@ package chapterThree;
 
 public class AirCondition {
         private boolean isOn;
-        private int temp = 16;
+        private int temp;
 
     public boolean isTurnedOn(){
         return isOn;
     }
 
-    public void turnOn(){
-        isOn = true;
-    }
-
-    public void turnOff(){
-        isOn = false;;
+    public void toggle(){
+        isOn = !isOn;
+        if(isOn){
+            temp = 16;
+        }
     }
 
     public void increaseTemp(){
@@ -27,12 +26,11 @@ public class AirCondition {
     }
 
     public void decreaseTemp(){
+        if(isTurnedOn() && temp >= 16 && temp <= 30)
+            temp--;
 
     }
 
-    public void toggle(){
-        isOn = !isOn;
-    }
 
     public int getTemp(){
         return temp;
