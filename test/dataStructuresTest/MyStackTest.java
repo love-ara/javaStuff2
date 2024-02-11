@@ -13,7 +13,7 @@ public class MyStackTest {
 
     @BeforeEach
     public void createNewInstance() {
-        stack = new MyStack(5);
+        stack = new MyStack(3);
     }
 
     @Test
@@ -48,7 +48,7 @@ public class MyStackTest {
 
         stack.pop();
         assertFalse(stack.isEmpty());
-        assertEquals("spoon", stack.peek());
+        assertEquals("spoon", stack.pop());
     }
 
     @Test

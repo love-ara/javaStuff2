@@ -12,15 +12,15 @@ public class MyStack {
         boolean isEmpty = true;
         stackSize = size;
         items = new String[stackSize];
-        topIndex = 0;
+        topIndex = -1;
     }
 
     public boolean isEmpty() {
-        return topIndex == 0;
+        return topIndex == -1;
     }
 
     public boolean isFull(){
-        return topIndex == stackSize;
+        return topIndex == stackSize -1;
     }
 
 
@@ -31,7 +31,10 @@ public class MyStack {
 
     public String pop(){
         if(isEmpty()) throw new EmptyStackException();
-        return items[topIndex--];
+        String popped = peek();
+        topIndex--;
+        return popped;
+        //return items[topIndex--];
     }
 
     public String peek(){
