@@ -18,7 +18,7 @@ public class MyStackTest {
 
     @Test
     public void newStackIsEmpty(){
-      assertTrue(stack.isEmpty());
+        assertTrue(stack.isEmpty());
     }
 
     @Test

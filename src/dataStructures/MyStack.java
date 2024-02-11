@@ -9,10 +9,10 @@ public class MyStack {
     private int topIndex;
 
     public MyStack(int size) {
-         boolean isEmpty = true;
-         stackSize = size;
-         items = new String[stackSize];
-         topIndex = 0;
+        boolean isEmpty = true;
+        stackSize = size;
+        items = new String[stackSize];
+        topIndex = 0;
     }
 
     public boolean isEmpty() {
@@ -25,8 +25,8 @@ public class MyStack {
 
 
     public void push(String item) {
-       if(isFull()) throw new StackOverflowError("Stack is full can not add " + item);
-       items[++topIndex] = item;
+        if(isFull()) throw new StackOverflowError("Stack is full can not add " + item);
+        items[++topIndex] = item;
     }
 
     public String pop(){
