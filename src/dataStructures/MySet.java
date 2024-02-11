@@ -21,7 +21,7 @@ public class MySet{
         return items.size();
     }
 
-    public boolean add(String item) {
+    public boolean addItem(String item) {
         if(!contains(item)){
             items.add(item);
             return true;
@@ -31,7 +31,7 @@ public class MySet{
 
     public void addAll(Collection<? extends String> collection){
         for(String item : collection){
-            add(item);
+            addItem(item);
         }
     }
 
@@ -39,7 +39,7 @@ public class MySet{
         return items.contains(item);
     }
 
-    public boolean remove(String item){
+    public boolean removeItem(String item){
         return items.remove(item);
     }
 

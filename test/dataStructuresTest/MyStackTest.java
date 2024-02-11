@@ -62,4 +62,16 @@ public class MyStackTest {
         assertEquals(3, stack.search("plate"));
         assertThrows(NoSuchElementException.class, ()-> stack.search("cup"));
     }
+
+    @Test
+    public void addItemsGreaterThanMaxSize_StackOverFlowExceptionTest(){
+        assertTrue(stack.isEmpty());
+
+        stack.push("plate");
+        stack.push("spoon");
+        stack.push("knife");
+
+        assertThrows(StackOverflowError.class, ()-> stack.push("fork"));
+
+    }
 }

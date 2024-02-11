@@ -5,8 +5,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
+
+
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -27,19 +27,26 @@ public class MySetTest {
     public void addAnItem_removeTheItem_mySetIsEmptyTest(){
         assertTrue(mySet.isEmpty());
 
-        mySet.add("chocolate");
-        mySet.remove("chocolate");
+        mySet.addItem("chocolate");
+        mySet.removeItem("chocolate");
 
         assertTrue(mySet.isEmpty());
     }
 
     @Test
-    public void addAnItem_
+    public void addAnItem_mySetNotEmptyTest(){
+        assertTrue(mySet.isEmpty());
+        mySet.addItem("cookie");
+
+        assertFalse(mySet.isEmpty());
+    }
+
     @Test
     public void mySetCanAddItem(){
         assertTrue(mySet.isEmpty());
 
-        assertEquals(true, mySet.add("sweets"));
+        mySet.addItem("sweets");
+        assertTrue(mySet.contains("sweets"));
     }
 
     @Test
@@ -53,5 +60,18 @@ public class MySetTest {
     }
 
     @Test
+    public void mySetSize(){
+        assertEquals(0, mySet.size());
+        mySet.addItem("x");
+
+        assertEquals(1, mySet.size());
+    }
+
+    @Test
+    public void mySetCanClear(){
+        mySet.addAll(Arrays.asList("qww", "www", "qas"));
+        mySet.clear();
+        assertTrue(mySet.isEmpty());
+    }
 
 }
