@@ -78,7 +78,7 @@ public class ArrayLst {
         String[] temp = new String[elements.length];
         int counter = 0;
 
-        for(int position = 0; position < elements.length; position++){
+        for(int position = 0; position < numberOfElement; position++){
             if(elements[position].equals(element)) continue;
 
             temp[counter] = elements[position];
