@@ -12,8 +12,34 @@ public class ArrayLst {
     }
 
     public void addElement(String  element){
+        if(size()== elements.length) createNewArray();
         elements[numberOfElement] = element;
         numberOfElement++;
+    }
+
+    public void addElement(int index, String element){
+        if(size()== elements.length) createNewArray();
+
+        String[] oo = new String[elements.length];
+
+        for(int count = 0; count < size() + 1; count++){
+           if(count == index - 1) continue;
+           if (count > index - 1){
+               oo[count] = elements[count];
+               continue;
+           }
+           oo[count] = elements[count];
+        }
+        oo[index - 1 ] = element;
+        elements = oo;
+        numberOfElement++;
+    }
+
+    private void createNewArray() {
+        String[] newArray = new String[elements.length * 2];
+
+        if(size() >= 0) System.arraycopy(elements, 0, newArray, 0, size());
+        elements = newArray;
     }
 
 

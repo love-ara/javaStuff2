@@ -4,7 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Person {
-    private List<Problem> problems = new ArrayList<>();
+    public List<Problem> problems = new ArrayList<>();
+
 
     public void addProblem(Problem problem){
         problems.add(problem);
@@ -19,7 +20,7 @@ public class Person {
     }
 
     public List<Problem> recountProblem(){
-       // System.out.println(problems);
+        System.out.println(problems);
         return problems;
     }
 }

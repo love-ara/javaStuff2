@@ -88,6 +88,26 @@ public class ArrayListTest {
         assertEquals(2, strings.getIndex("rice"));
     }
 
+
+//    @Test
+//    public void testThatListCanStoreSixOrMoreElementsAfterAddingByIndex() {
+//        strings.addElement("cookie");
+//        strings.addElement("apple");
+//        strings.addElement("pea");
+//        assertEquals(3, strings.size());
+//        assertEquals(2, strings.getIndex("pea"));
+//
+//        strings.addElement(3, "see");
+//        assertEquals(4, strings.size());
+//        assertEquals(4, strings.getIndex("we"));
+//        assertEquals(3, strings.getIndex("you"));
+//
+//        strings.addElement("cocoa");
+//        assertEquals(5, strings.size());
+//        strings.addElement("tea");
+//        assertEquals(6, strings.size());
+//    }
+
     @Test
     public void removeElementThatIsNotOnTheFromList_throwsException(){
         assertTrue(strings.isEmpty());

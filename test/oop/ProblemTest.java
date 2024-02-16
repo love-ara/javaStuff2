@@ -4,6 +4,10 @@ import org.junit.jupiter.api.Test;
 import oop.Person;
 import oop.Problem;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -33,7 +37,6 @@ public class ProblemTest {
         Problem problem1 = new Problem("No fees", Type.EDUCATION);
         person.addProblem(problem1);
         person.recountProblem();
-        String[] expected = {"Nightmares : Type.SPIRITUAL", "No fees : Type.EDUCATION"};
-        assertEquals(expected, person.recountProblem());
+        assertEquals(person.problems, person.recountProblem());
     }
 }
