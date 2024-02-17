@@ -1,4 +1,6 @@
-package oop;
+package oop.Problem;
+
+import oop.Problem.Problem;
 
 import java.util.ArrayList;
 import java.util.List;

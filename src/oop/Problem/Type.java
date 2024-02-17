@@ -1,4 +1,4 @@
-package oop;
+package oop.Problem;
 
 public enum Type {
     FINANCIAL, SPIRITUAL, EDUCATION, BUSINESS, TECHNICAL;

@@ -1,4 +1,4 @@
-package oop;
+package oop.Problem;
 
 public class Problem {
     private String name;

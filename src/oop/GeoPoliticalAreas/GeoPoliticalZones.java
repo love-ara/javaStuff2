@@ -1,4 +1,4 @@
-package oop;
+package oop.GeoPoliticalAreas;
 
 public enum GeoPoliticalZones {
 

@@ -1,5 +1,7 @@
 package oop;
 
+import oop.GeoPoliticalAreas.GeoPoliticalAreas;
+import oop.GeoPoliticalAreas.GeoPoliticalZones;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

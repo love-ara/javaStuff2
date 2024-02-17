@@ -1,12 +1,9 @@
 package oop;
 
+import oop.Problem.Person;
+import oop.Problem.Type;
 import org.junit.jupiter.api.Test;
-import oop.Person;
-import oop.Problem;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import oop.Problem.Problem;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
