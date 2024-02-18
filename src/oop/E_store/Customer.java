@@ -2,7 +2,7 @@ package oop.E_store;
 
 import java.util.List;
 
-public class Customer {
+public class Customer extends User{
     private List<BillingInformation> billingInformation;
     private ShoppingCart shoppingCart;
 }
