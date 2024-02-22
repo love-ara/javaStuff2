@@ -1,6 +1,5 @@
-package dataStructuresTest;
+package dataStructures;
 
-import dataStructures.ArrayLst;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
