@@ -7,24 +7,11 @@ public class Account {
     private int number;
 
 
-    public Account(int number){
-        this.number = number;
-    }
 
-    public Account(String pin){
-        validatePin(pin);
-        this.pin = pin;
-    }
-
-    public Account(String firstName, String lastName, String pin){
-        this.name = firstName +" " +  lastName;
-        this.pin = pin;
-    }
-
-
-    public Account(int accountNumber, String firstName, String lastName, String pin) {
+    public Account(int accountNumber, String name, String pin) {
         this.number = accountNumber;
-        this.name = firstName +" "+  lastName;
+        this.name = name;
+        validatePin(pin);
         this.pin = pin;
     }
 
@@ -59,12 +46,10 @@ public class Account {
 
     public int checkBalance(String pin){
         verifyPin(pin);
-        if(balance == 0)return  0;
         return balance;
     }
 
     void verifyPin(String enteredPin){
-        validatePin(enteredPin);
         boolean isValidPin = this.pin.equals(enteredPin);
         if (!isValidPin) throw new InvalidPinException("Incorrect pin");    }
 

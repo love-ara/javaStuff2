@@ -6,15 +6,10 @@ import java.util.UUID;
 
 public class Bank {
     private String name;
-    private List<Account> accounts;
-
-    public Bank(){
-        this.accounts = new ArrayList<>();
-    }
+    private final List<Account> accounts = new ArrayList<>();
 
     public Bank(String name){
         this.name = name;
-        this.accounts = new ArrayList<>();
     }
     public void deposit(int accountNumber, int amount){
         Account account = findAccount(accountNumber);
@@ -23,7 +18,7 @@ public class Bank {
 
     public void withdraw(int accountNumber, int amount, String pin){
         Account account = findAccount(accountNumber);
-        if(account != null) account.withdraw(amount, pin);
+        account.withdraw(amount, pin);
     }
 
     public void transfer(int depositorAccountNumber, int receiverAccountNumber, int amount, String pin){
@@ -43,19 +38,15 @@ public class Bank {
 
     public int checkBalance(int accountNumber, String pin){
         Account account = findAccount(accountNumber);
-        if(account != null){
-            int balance = account.checkBalance(pin);
-        if (balance == 0) {
-            return 0;
-        }
-        return  balance;
-        }
-        return -1;
+
+            return account.checkBalance(pin);
+
     }
 
     public Account registerCustomer(String firstName, String lastName, String pin){
+        String name = firstName + " " + lastName;
         int accountNumber = generateAccountNumber();
-        Account account = new Account(accountNumber, firstName, lastName, pin);
+        Account account = new Account(accountNumber, name, pin);
         accounts.add(account);
         return account;
     }
@@ -71,7 +62,7 @@ public class Bank {
                 return account;
             }
         }
-        return null;
+        throw new NullPointerException("Account does not exist");
     }
 
     public List<Account> findAccountsByName(String name) {
@@ -90,7 +81,4 @@ public class Bank {
         return Math.abs(uuid.hashCode());
     }
 
-    public int getAccountNumber() {
-        return generateAccountNumber();
-    }
 }

@@ -1,62 +1,130 @@
 package oop.Bank;
+import oop.Bank.InvalidAmountException;
+
 
 import java.util.Scanner;
-import java.io.Console;
-
+import javax.swing.*;
 
 public class BankApp {
-    private static Bank bank;
-    private static Scanner input = new Scanner(System.in);
+    private static final Bank gtBank = new Bank("Gtbank");
 
-    public BankApp() {
-        bank = new Bank();
-    }
 
     public static void main(String[] args) {
-        bank = new Bank("FCMB");
-        menu();
-        String[] names = getNames();
-        String pin = create(input);
-        bank.registerCustomer(names[0], names[1], pin);
-        displaySuccessful();
-        int accountNum = bank.getAccountNumber();
-        System.out.printf("Your account number is: %d%n", accountNum);
-        System.out.print("Welcome " + fullName(names[0], names[1]) + " " + accountNum);
+        gotoMainMenu();
     }
 
-    public static void menu() {
-        System.out.println("Hello, Let's get you started");
-    }
-
-    public static void displaySuccessful() {
-        System.out.println("Account successfully created");
-    }
-
-    private static String[] getNames() {
-        String[] names = new String[2];
-        System.out.print("Enter your first name: ");
-        names[0] = input.nextLine();
-        System.out.print("Enter your last name: ");
-        names[1] = input.nextLine();
-        return names;
-    }
-
-    private static String fullName(String firstName, String lastName) {
-        return firstName + " " + lastName;
-    }
-
-
-
-    private static String create(Scanner scanner) {
-        System.out.print("Enter your PIN: ");
-        String password = scanner.nextLine();
-        System.out.print("Enter your PIN: ");
-        for (int i = 0; i < password.length(); i++) {
-            System.out.print("*");
+    private static void gotoMainMenu() {
+        String mainMenu = """
+                \nWelcome to This bank App!
+                What do you want to do today?
+                1-> Create Account
+                2-> Withdraw
+                3-> Deposit
+                4-> Transfer
+                5-> Check Balance
+                6-> Close Account
+                7-> Exit App!!!
+                """;
+        String userInput = input(mainMenu);
+        switch (userInput.charAt(0)){
+            case '1'-> createAccount();
+            case '2'-> withdraw();
+            case '3'-> deposit();
+            case '4'-> transfer();
+            case '5'-> checkBalance();
+            case '6'-> closeAccount();
+            case '7'-> exitApp();
+            default-> gotoMainMenu();
         }
-        System.out.println();
-        return password;
     }
 
-}
+    private static void checkBalance() {
+        String accountNumber = input("Enter your account number: ");
+        String pin = input("Enter your pin: ");
+        try {
+            int balance = gtBank.checkBalance(Integer.parseInt(accountNumber), pin);
+            print("Balance: " + balance);
+        }catch(Exception e){
+            print(e.getMessage());
+        }finally {
+            gotoMainMenu();
+        }
 
+    }
+
+    private static void transfer() {
+        String amount = input("Enter transfer amount: ");
+        String senderAccount = input("Enter your account number: ");
+        String receiverAccount = input("Enter the receiving account number: ");
+        String pin = input("Enter your pin: ");
+        try{
+            gtBank.transfer(Integer.parseInt(amount), Integer.parseInt(senderAccount), Integer.parseInt(receiverAccount), pin);
+        }catch (Exception e){
+            print(e.getMessage());
+        }finally {
+            gotoMainMenu();
+        }
+    }
+
+    private static void deposit() {
+        String accountNumber = input("Enter your account number: ");
+        String amount = input("Enter an amount: ");
+        try {
+            gtBank.deposit(Integer.parseInt(accountNumber), Integer.parseInt(amount));
+        }catch (RuntimeException e){
+            print(e.getMessage());
+        }finally {
+            gotoMainMenu();
+        }
+    }
+
+    private static void withdraw() {
+        String accountNumber = input("Enter your account number: ");
+        String amount = input("Enter the amount: ");
+        String pin = input("Enter your pin: ");
+        try {
+            gtBank.withdraw(Integer.parseInt(accountNumber), Integer.parseInt(amount), pin);
+            print("Withdraw successful");
+        }catch (Exception e){
+           print(e.getMessage());
+        }finally {
+            gotoMainMenu();
+        }
+    }
+
+    private static void closeAccount() {
+        String accountNumber = input("Enter the account number: ");
+        String pin = input("Enter your pin: ");
+        try{
+            gtBank.removeAccount(Integer.parseInt(accountNumber), pin);
+        }catch (Exception e){
+            print(e.getMessage());
+        }finally {
+            exitApp();
+        }
+    }
+
+    private static void exitApp() {
+        System.exit(2);
+    }
+
+
+    private static String input(String mainMenu) {
+        print(mainMenu);
+        Scanner scanner = new Scanner(System.in);
+        return scanner.nextLine();
+    }
+    private static void print(String output){
+        System.out.print(output);
+    }
+
+    private static void createAccount() {
+        String firstName = input("Enter your first name: ");
+        String lastName = input("Enter your last name: ");
+        String pin = input("Enter your pin: ");
+        Account account = gtBank.registerCustomer(firstName, lastName, pin);
+        print("\nWelcome " + firstName +" "+ lastName + "\nYour account is created successfully!");
+        print("\nYour account number is:" + account.getAccountNumber());
+        gotoMainMenu();
+    }
+}

@@ -14,7 +14,7 @@ public class AccountTest {
 
     @BeforeEach
     public void initializeAccount() {
-        account = new Account("3653");
+        account = new Account(3653, "name", "3653");
     }
 
     @Test
