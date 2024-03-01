@@ -43,9 +43,10 @@ public class DiaryTest {
         assertTrue(diary.isLocked());
         diary.unlockDiary("password");
         diary.createEntry("title", "body");
+        diary.createEntry("title", "body");
 
-        diary.deleteEntry(1);
-        assertEquals(0, diary.getNumberOfEntry());
+        diary.deleteEntry(2);
+        assertEquals(1, diary.getNumberOfEntry());
     }
 
     @Test

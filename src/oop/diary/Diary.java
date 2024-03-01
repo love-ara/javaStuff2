@@ -11,7 +11,7 @@ public class Diary {
     private boolean isLocked = true;
     private List<Entry> entries = new ArrayList<>();
     int numberOfEntry = 0;
-    private int id;
+    private int id = 0;
 
     public Diary(String username, String password){
         this.username = username;
@@ -34,8 +34,8 @@ public class Diary {
         return isLocked;
     }
 
-    public void createEntry(String title, String Body){
-        Entry entry = new Entry(generateId(), "title", "body");
+    public void createEntry(String title, String body){
+        Entry entry = new Entry(generateId(), title, body);
         entries.add(entry);
         numberOfEntry++;
     }
@@ -43,7 +43,7 @@ public class Diary {
     public void deleteEntry(int id){
          Entry entry = findEntryById(id);
             entries.remove(entry);
-            id --;
+            this.id --;
             numberOfEntry --;
     }
 
@@ -54,17 +54,13 @@ public class Diary {
         throw new NullPointerException("No such entry");
     }
 
-    public void updateEntry(int id, String updatedTitle, String Update){
+    public void updateEntry(int id, String updatedTitle, String updatedBody){
         Entry entry = findEntryById(id);
-        for (Entry entry1 : entries){
-            if(entry == entry1) {
-                entry1.setBody(updatedTitle);
-                entry1.setTitle(updatedTitle);
-            }
-            }
+                entry.setTitle(updatedTitle);
+                entry.setBody(updatedBody);
+
     }
     public int getId(String title){
-        int id = 0;
         for (Entry entry : entries) if(title.equals(entry.getTitle())) id = entry.getId();
         return id;
         }

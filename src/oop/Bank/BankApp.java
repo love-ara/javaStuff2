@@ -38,7 +38,7 @@ public class BankApp {
         }
     }
 
-    private static void checkBalance() {
+    public static void checkBalance() {
         String accountNumber = input("Enter your account number: ");
         String pin = input("Enter your pin: ");
         try {
@@ -78,7 +78,7 @@ public class BankApp {
         }
     }
 
-    private static void withdraw() {
+    public static void withdraw() {
         String accountNumber = input("Enter your account number: ");
         String amount = input("Enter the amount: ");
         String pin = input("Enter your pin: ");
