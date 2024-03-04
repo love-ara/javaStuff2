@@ -26,7 +26,7 @@ public class MainApp {
             print("Diary has been created");
         }
         catch (RuntimeException e) {
-            print("Error: " + e.getMessage());
+            print(STR."Error: \{e.getMessage()}");
         }
         finally {
             goToMainMenu();
