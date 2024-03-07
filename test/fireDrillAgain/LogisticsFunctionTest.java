@@ -1,6 +1,5 @@
 package fireDrillAgain;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static fireDrillAgain.LogisticsFunction.calculatePayment;

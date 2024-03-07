@@ -12,7 +12,9 @@ public class Entry {
         this.id = id;
         this.title = title;
         this.body = body;
+        this.dateCreated = LocalDateTime.now();
     }
+
     public int getId(){
         return id;
     }
@@ -28,14 +30,9 @@ public class Entry {
     public String getBody(){
         return body;
     }
-    public void setDateCreated(LocalDateTime dateCreated){
-        this.dateCreated = dateCreated;
-    }
-    public LocalDateTime getDateCreated(){
-        return dateCreated;
-    }
+
     @Override
     public String toString(){
-        return String.format("Title: %s\t\n Body:\n\n%s", title, body);
+        return String.format("Date: %s%nTitle: %s\t\n Body:\n\n%s", dateCreated, title, body);
     }
 }
