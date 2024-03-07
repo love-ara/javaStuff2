@@ -15,7 +15,7 @@ public class Diaries {
 
     public Diary findByUsername(String username){
         for(Diary diary: diaries){
-            if(diary.getUsername.equals(username)) return diary;
+            if(diary.getUsername().equals(username)) return diary;
         }
         throw new NullPointerException("Diary does not exist");
     }

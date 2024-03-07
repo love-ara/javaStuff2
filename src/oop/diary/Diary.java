@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Diary {
-    public String getUsername;
     private String username;
     private String password;
     private boolean isLocked = true;

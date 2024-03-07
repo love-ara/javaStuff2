@@ -176,7 +176,7 @@ public class MainApp {
     private static void exitApp(){
         try{
             print("cancelling");
-            Thread.sleep(1000);
+            Thread.sleep(10);
         }
         catch (InterruptedException ignored){
 

@@ -1,5 +1,6 @@
 package fireDrill;
 
+import javax.swing.*;
 import java.util.Scanner;
 
 public class TicTacToeMain {
@@ -8,34 +9,45 @@ public class TicTacToeMain {
     public static void main(String[] args) {
         play();
     }
+
     public static void play(){
-        Scanner input = new Scanner(System.in);
-        System.out.println("Let's start ");
+
+        print("Let's start ", "Play");
         while (!game.isWin() && !game.isDraw()) {
             try {
 
-                System.out.println(game.displayBoard());
-                System.out.printf("It' s your turn, Player %s%n", game.currentPlayer().name());
-                System.out.print("Enter your move (1-9): ");
-                int move = input.nextInt();
+                print(game.displayBoard(), "board");
+                print("It' s your turn, Player " + game.currentPlayer().name(), "turn");
+                String  payerMove = input("Enter your move (1-9): ");
+                int move = Integer.parseInt(payerMove);
 
                 if (!game.makeMove(move)) {
                     throw new InvalidPositionException("Invalid move, Try again");
                 }
 
             } catch (RuntimeException e) {
-                System.out.println(e.getMessage());
+                displayErrorMessage(e);
             }
         }
-        System.out.println(game.displayBoard());
+        print(game.displayBoard(), "board");
 
         if(game.isWin()){
             CellType winner;
             winner = game.currentPlayer() == CellType.X? CellType.O : CellType.X;
-            System.out.printf("Player %s Wins!", winner);
+            print( "Player " + winner + " Wins!", "Winner");
         }else{
-            System.out.println("It's a draw!");
+            print("It's a draw!", "Tie!");
         }
 
     }
+
+    private static void print(String message, String title){
+        JOptionPane.showMessageDialog(null, message, title,JOptionPane.INFORMATION_MESSAGE);
+    }
+    private static String  input(String message){
+        return JOptionPane.showInputDialog(null, message, "Make your move", JOptionPane.QUESTION_MESSAGE);
+    }
+    private static void displayErrorMessage(RuntimeException e) {
+          JOptionPane.showMessageDialog(null, e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+      }
 }

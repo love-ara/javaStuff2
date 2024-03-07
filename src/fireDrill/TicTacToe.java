@@ -11,8 +11,10 @@ public class TicTacToe {
         for(CellType[] smallerBoard: board){
             Arrays.fill(smallerBoard, CellType.EMPTY);
         }
-        currentPlayer = CellType.X;
+       currentPlayer = CellType.X;
     }
+
+
 
     public String displayBoard() {
         StringBuilder output = new StringBuilder();
@@ -33,8 +35,7 @@ public class TicTacToe {
     public boolean makeMove(int move){
         if(isValidMove(move)){
             int row = move %  3 == 0? (move / 3) - 1 : move / 3;
-            int column = move % 3 == 0 ? (move / 3) - 1 : (move % 3) - 1;
-            if (move % 3 == 0) column = 2;
+            int column = move % 3 == 0 ? 2 : (move % 3) - 1;
 
             isSpaceEmpty(row, column);
             board[row][column] = currentPlayer;

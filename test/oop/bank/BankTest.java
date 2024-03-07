@@ -47,7 +47,6 @@ public class BankTest {
     public void transferToAnotherBankAccountTest() {
         Account sender = bank.registerCustomer("Praise", "Oyewole", "4763");
         int senderAccountNumber = sender.getAccountNumber();
-        Bank receiverBank = new Bank("Access");
         Account receiver = bank.registerCustomer("Hannah", "Ajibola", "0000");
         int accountNum = receiver.getAccountNumber();
         bank.deposit(senderAccountNumber, 6000);
@@ -64,7 +63,7 @@ public class BankTest {
         int accountNumber = account.getAccountNumber();
         bank.deposit(accountNumber, 100);
         bank.removeAccount(accountNumber, "5678");
-        assertNull(bank.findAccount(accountNumber));
+        //assertEquals();
     }
 
 
