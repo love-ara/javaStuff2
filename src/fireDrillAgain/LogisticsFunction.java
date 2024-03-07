@@ -2,7 +2,7 @@ package fireDrillAgain;
 
 public class LogisticsFunction {
 
-    public int calculatePayment(int successfulDeliveries) {
+    public static int calculatePayment(int successfulDeliveries) {
         if (successfulDeliveries <= 0) {
             throw new IllegalArgumentException("Number of successful deliveries cannot be negative.");
         } else if (successfulDeliveries > 100) {

@@ -1,7 +1,6 @@
 package fireDrill;
 
 import javax.swing.*;
-import java.util.Scanner;
 
 public class TicTacToeMain {
     private static TicTacToe game = new TicTacToe();
