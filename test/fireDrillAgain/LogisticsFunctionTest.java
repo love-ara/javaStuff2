@@ -44,10 +44,12 @@ public class LogisticsFunctionTest {
     @Test
     public void negativeSuccessfulDeliveries_throwsException(){
         assertThrows(IllegalArgumentException.class, ()->func.calculatePayment(-20));
+        assertThrows(IllegalArgumentException.class, ()->func.calculatePayment(0));
     }
     @Test
     public void successfulDeliveriesGreaterThan_100throwsException(){
         assertThrows(IllegalArgumentException.class, ()-> func.calculatePayment(120));
+        assertThrows(IllegalArgumentException.class, ()-> func.calculatePayment(189));
     }
 
 }
