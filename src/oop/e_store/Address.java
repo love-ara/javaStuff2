@@ -1,4 +1,4 @@
-package oop.E_store;
+package oop.e_store;
 
 public class Address {
     private String city;

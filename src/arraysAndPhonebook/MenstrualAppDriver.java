@@ -1,3 +1,7 @@
+package arraysAndPhonebook;
+
+import arraysAndPhonebook.MenstrualApp;
+
 import javax.swing.*;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;

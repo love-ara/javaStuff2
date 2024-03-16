@@ -1,3 +1,5 @@
+package dietelFour;
+
 import deitelFour.ReadingInputAndSum;
 import org.junit.jupiter.api.Test;
 

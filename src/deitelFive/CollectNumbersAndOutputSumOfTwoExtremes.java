@@ -6,12 +6,12 @@ public class CollectNumbersAndOutputSumOfTwoExtremes {
         int max = Integer.MIN_VALUE;
         int min = Integer.MAX_VALUE;
         int sum = 0;
-        for(int index = 0; index < numbers.length;index++){
-            if(numbers[index] < min){
-                min = numbers[index];
+        for (int number : numbers) {
+            if (number < min) {
+                min = number;
             }
-            if(numbers[index] > max){
-                max = numbers[index];
+            if (number > max) {
+                max = number;
             }
 
         }

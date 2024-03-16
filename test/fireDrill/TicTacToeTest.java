@@ -93,7 +93,6 @@ public class TicTacToeTest {
     @Test
     public void playersHaveATieTest(){
         game.makeMove(5);
-        game.makeMove(9);
         game.makeMove(3);
         game.makeMove(7);
         game.makeMove(8);

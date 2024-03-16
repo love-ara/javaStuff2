@@ -8,7 +8,7 @@ public class LogisticsFunction {
         } else if (successfulDeliveries > 100) {
             throw new IllegalArgumentException("Number of successful deliveries cannot exceed 100.");
         }
-        int amountPerParcel = 500;
+        //int amountPerParcel = 500;
         int basePay = 5000;
         int wage;
 

@@ -1,3 +1,5 @@
+package dietelFive;
+
 import org.junit.jupiter.api.Test;
 import deitelFive.CollectNumbersAndOutputSumOfTwoExtremes;
 

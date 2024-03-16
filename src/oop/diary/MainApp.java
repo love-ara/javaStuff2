@@ -133,7 +133,7 @@ public class MainApp {
             print("Entry has been deleted");
         }
         catch (RuntimeException e) {
-            print("There was an error while deleting the entry.\n" + e.getMessage());
+            print(STR."There was an error while deleting the entry.\n\{e.getMessage()}");
         }
         finally {
             goToMainMenu();

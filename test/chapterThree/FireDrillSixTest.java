@@ -1,3 +1,5 @@
+package chapterThree;
+
 import chapterThree.FireDrillSix;
 import org.junit.jupiter.api.Test;
 

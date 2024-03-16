@@ -1,3 +1,5 @@
+package dietelFive;
+
 import deitelFive.SumOfASeries;
 import org.junit.jupiter.api.Test;
 

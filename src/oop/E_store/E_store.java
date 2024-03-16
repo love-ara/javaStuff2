@@ -1,6 +1,7 @@
-package oop.E_store;
+package oop.e_store;
 
-public class E_store {
-    private User[] users;
+public interface E_store {
+
+
 
 }

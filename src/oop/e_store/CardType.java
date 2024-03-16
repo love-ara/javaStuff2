@@ -1,6 +1,6 @@
-package oop.E_store;
+package oop.e_store;
 
-public enum CardType {
+public enum  CardType {
     MASTER_CARD,
     VISA_CARD,
     VERVE,
