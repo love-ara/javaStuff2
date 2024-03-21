@@ -1,42 +1,266 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="91ae2037-691f-4637-ac11-714a00b877e5" name="Changes" comment="commit" />
+    <list default="true" id="91ae2037-691f-4637-ac11-714a00b877e5" name="Changes" comment="commit">
+      <change afterPath="$PROJECT_DIR$/src/controllers/DiaryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/model/Diary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/model/Entry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/repository/DiaryRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/repository/DiaryRepositoryImp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/repository/EntryRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/repository/EntryRepositoryImp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dtos/requests/CreateEntryRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dtos/requests/DeleteRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dtos/requests/LoginRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dtos/requests/RegisterRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dtos/requests/UpdateEntryRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exceptions/DiaryException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exceptions/EmptyEntryException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/service/DiaryServices.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/service/DiaryServicesImp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/service/EntryServices.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/service/EntryServicesImp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/repository/DiaryRepositoryImpTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/repository/EntryRepositoryImpTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/service/DiaryServicesImpTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/designPattern.iml" beforeDir="false" afterPath="$PROJECT_DIR$/designPattern.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit5 Test Class" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;history&quot;: [
+    {
+      &quot;searchQuery&quot;: &quot;designPattern&quot;,
+      &quot;state&quot;: &quot;OPEN&quot;,
+      &quot;assignee&quot;: &quot;love-ara&quot;
+    },
+    {
+      &quot;state&quot;: &quot;OPEN&quot;,
+      &quot;author&quot;: &quot;love-ara&quot;
+    }
+  ],
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;author&quot;: &quot;love-ara&quot;
+  }
+}</component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="5" />
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="masterTwo" />
+                    <option name="lastUsedInstant" value="1710387672" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="master" />
+                    <option name="lastUsedInstant" value="1710387671" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
-}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="8921c8f5-668b-4c86-af23-cac07034bb38" />
+        <option name="url" value="https://github.com/love-ara/javaStuff2.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2df6p6Mqx64rXFbLbHTfAkeT0e6" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "C:/Users/Administrator/IdeaProjects/designPattern/src/Main.java",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;JUnit.DiaryRepositoryImpTest.diaryCanBeDeletedWithUsernameTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DiaryRepositoryImpTest.diaryCanBeFoundByUsernameTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DiaryRepositoryImpTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DiaryRepositoryImpTest.save.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DiaryRepositoryImpTest.saveMoreThanOneDiary_DeleteMoreThanOne_DiaryCountReducesTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DiaryRepositoryImpTest.saveMoreThanOneDiary_findTheDiaries_returnsAllDiaryTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DiaryRepositoryImpTest.saveTwoDiaries_numberOfDiariesIncreasesToTwo.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DiaryServicesImpTest.EntryCanUpdateTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DiaryServicesImpTest.aUserCanCreateAnEntryTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DiaryServicesImpTest.aUserCanLogoutTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DiaryServicesImpTest.anotherUserCanCreateAnEntryTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DiaryServicesImpTest.diaryCanBeDeletedTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DiaryServicesImpTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DiaryServicesImpTest.loginAUserTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DiaryServicesImpTest.registerAUser_numberOfUserIsOneTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DiaryServicesImpTest.registerSameUserThrowsExceptionTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.EntryRepositoryImpTest.createNewEntry.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.EntryRepositoryImpTest.entriesCanBeDeletedTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.EntryRepositoryImpTest.entriesCanBeDeletedWithIdTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.EntryRepositoryImpTest.entriesCanBeFoundWithIdTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.EntryRepositoryImpTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.EntryRepositoryImpTest.moreThanOneEntriesCanBeCreatedAndSavedTest.executor&quot;: &quot;Run&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;true&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;true&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;masterTwo&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/Administrator/IdeaProjects/designPattern/src/Main.java&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="service" />
+      <recent name="dtos" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="repositories" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="repositories" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.EntryRepositoryImpTest">
+    <configuration name="DiaryRepositoryImpTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="designPattern" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="repository" />
+      <option name="MAIN_CLASS_NAME" value="repository.DiaryRepositoryImpTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DiaryRepositoryImpTest.saveMoreThanOneDiary_findTheDiaries_returnsAllDiaryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="designPattern" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="repository" />
+      <option name="MAIN_CLASS_NAME" value="repository.DiaryRepositoryImpTest" />
+      <option name="METHOD_NAME" value="saveMoreThanOneDiary_findTheDiaries_returnsAllDiaryTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EntryRepositoryImpTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="designPattern" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="repository" />
+      <option name="MAIN_CLASS_NAME" value="repository.EntryRepositoryImpTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EntryRepositoryImpTest.entriesCanBeDeletedTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="designPattern" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="repository" />
+      <option name="MAIN_CLASS_NAME" value="repository.EntryRepositoryImpTest" />
+      <option name="METHOD_NAME" value="entriesCanBeDeletedTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EntryRepositoryImpTest.entriesCanBeDeletedWithIdTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="designPattern" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="repository" />
+      <option name="MAIN_CLASS_NAME" value="repository.EntryRepositoryImpTest" />
+      <option name="METHOD_NAME" value="entriesCanBeDeletedWithIdTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.EntryRepositoryImpTest" />
+        <item itemvalue="JUnit.DiaryRepositoryImpTest" />
+        <item itemvalue="JUnit.DiaryRepositoryImpTest.saveMoreThanOneDiary_findTheDiaries_returnsAllDiaryTest" />
+        <item itemvalue="JUnit.EntryRepositoryImpTest.entriesCanBeDeletedWithIdTest" />
+        <item itemvalue="JUnit.EntryRepositoryImpTest.entriesCanBeDeletedTest" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -45,7 +269,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710386970570</updated>
-      <workItem from="1710386972589" duration="456000" />
+      <workItem from="1710386972589" duration="4902000" />
+      <workItem from="1710392877596" duration="48000" />
+      <workItem from="1710439631058" duration="1160000" />
+      <workItem from="1710441677893" duration="1822000" />
+      <workItem from="1710475038579" duration="1571000" />
+      <workItem from="1710564997618" duration="11559000" />
+      <workItem from="1710594760689" duration="688000" />
+      <workItem from="1710761088734" duration="2828000" />
+      <workItem from="1710784394145" duration="27964000" />
+      <workItem from="1710953586533" duration="7237000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <option name="closed" value="true" />
@@ -55,7 +288,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710387423598</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="commit">
+      <option name="closed" value="true" />
+      <created>1710387706505</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1710387706506</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -79,11 +320,12 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Main.java</url>
-          <line>11</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.util.ConcurrentModificationException" package="java.util">
+            <option name="NOTIFY_UNCAUGHT" value="false" />
+          </properties>
+          <option name="timeStamp" value="2" />
+        </breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
