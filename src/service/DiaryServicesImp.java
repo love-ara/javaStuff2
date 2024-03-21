@@ -5,6 +5,10 @@ import data.model.Entry;
 import data.repository.DiaryRepository;
 import data.repository.DiaryRepositoryImp;
 import dtos.requests.*;
+import exceptions.DiaryLockedException;
+import exceptions.IncorrectPasswordException;
+import exceptions.UserAlreadyExistException;
+import exceptions.UserNotFoundException;
 
 public class DiaryServicesImp implements DiaryServices{
     private DiaryRepository diaryRepo = new DiaryRepositoryImp();
@@ -27,13 +31,13 @@ public class DiaryServicesImp implements DiaryServices{
     @Override
     public Diary findUser(String username) {
         Diary diary = diaryRepo.findById(username);
-        if(diary == null) throw new IllegalArgumentException("User not found");
+        if(diary == null) throw new UserNotFoundException("User not found");
         return diary;
     }
 
     private void validateUsername(String username) {
         Diary diary = diaryRepo.findById(username);
-        if(diary != null) throw new IllegalArgumentException(String.format("username %s already exist", username));
+        if(diary != null) throw new UserAlreadyExistException(String.format("username %s already exist", username));
     }
 
 
@@ -86,12 +90,12 @@ public class DiaryServicesImp implements DiaryServices{
 
     private void validateLoginDetails(LoginRequest loginRequest) {
         Diary diary = diaryRepo.findById(loginRequest.getUsername());
-        if(!diary.getPassword().equals(loginRequest.getPassword())) throw new IllegalArgumentException("Incorrect password");
+        if(!diary.getPassword().equals(loginRequest.getPassword())) throw new IncorrectPasswordException("Incorrect password");
     }
 
     public void lockedStatus(String username){
         Diary diary = findUser(username);
-        if(diary.isLocked()) throw new IllegalArgumentException("Diary is locked");
+        if(diary.isLocked()) throw new DiaryLockedException("Diary is locked");
     }
 
 

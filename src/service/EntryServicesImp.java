@@ -4,6 +4,7 @@ import data.model.Entry;
 import data.repository.EntryRepository;
 import data.repository.EntryRepositoryImp;
 import exceptions.EmptyEntryException;
+import exceptions.EntryNotFoundException;
 
 import java.util.List;
 
@@ -31,7 +32,7 @@ public class EntryServicesImp implements EntryServices{
     @Override
     public Entry getEntryWith(int id) {
         Entry entry = entryRepo.findById(id);
-        if(entry == null) throw new IllegalArgumentException("Entry not found");
+        if(entry == null) throw new EntryNotFoundException("Entry not found");
 
         return entry;
     }
