@@ -41,8 +41,8 @@ public class DiaryServicesImp implements DiaryServices{
     }
 
     private void validateUsername(String username) {
-        Diary diary = findUser(username);
-        if(diary.getUsername().equals(username)) throw new UserAlreadyExistException(String.format("username %s already exist", username));
+        if(diaryRepo.existsById(username)) throw new UserAlreadyExistException(String.format("username %s already exist"
+                , username));
     }
 
 
@@ -101,6 +101,11 @@ public class DiaryServicesImp implements DiaryServices{
         Diary diary = findUser(username);
         lockedStatus(diary);
         entryServices.delete(id);
+    }
+
+    @Override
+    public List<Entry> FindAllEntries() {
+        return entryServices.findAllEntries();
     }
 
     @Override

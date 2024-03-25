@@ -14,7 +14,7 @@ public class DiaryController {
     @Autowired
     private DiaryServices diaryServices;
 
-    @PostMapping("/ register")
+    @PostMapping("/register")
     public String registerUser(@RequestBody RegisterRequest registerRequest){
         try {
             diaryServices.register(registerRequest);
@@ -33,16 +33,17 @@ public class DiaryController {
             return e.getMessage();
         }
     }
-    @PatchMapping("/logout/{name}")
+    @PostMapping ("/sign-out/{name}")
     public String logoutUser(@PathVariable("name") String username){
         try {
             diaryServices.logout(username);
-            return "Logout Success";
+            return username + " Logout Success";
         }catch (DiaryException e){
             return e.getMessage();
         }
     }
-    @DeleteMapping("/delete/{username}")
+
+    @DeleteMapping("/delete")
     public  String deleteDiary(@RequestBody DeleteRequest deleteRequest){
         try {
             diaryServices.deleteDiary(deleteRequest);
@@ -51,8 +52,8 @@ public class DiaryController {
             return e.getMessage();
         }
     }
-    @PostMapping("/createEntry")
-    public  String createEntry(CreateEntryRequest createEntryRequest){
+    @PostMapping("/create-entry")
+    public  String createEntry(@RequestBody CreateEntryRequest createEntryRequest){
         try {
             diaryServices.createEntryWith(createEntryRequest);
             return "Entry Created Successfully";
@@ -60,8 +61,8 @@ public class DiaryController {
             return e.getMessage();
         }
     }
-    @PatchMapping("/updateEntry")
-    public String updateEntry(UpdateEntryRequest updateEntryRequest){
+    @PatchMapping("/update-entry")
+    public String updateEntry(@RequestBody UpdateEntryRequest updateEntryRequest){
         try {
             diaryServices.updateEntryWith(updateEntryRequest);
             return "Entry Updated Successfully";
@@ -69,8 +70,8 @@ public class DiaryController {
             return e.getMessage();
         }
     }
-    @DeleteMapping("/deleteEntry/{username}")
-    public String deleteEntry( String id, @PathVariable String username){
+    @DeleteMapping("/deleteEntry")
+    public String deleteEntry(String id,  String username){
         try {
             diaryServices.delete(id, username);
             return "Success";
@@ -78,16 +79,24 @@ public class DiaryController {
             return e.getMessage();
         }
     }
-    @GetMapping("getEntries/{username}")
-    public List<?> entries(@PathVariable String username){
+    @GetMapping("/get-entries/{username}")
+    public List<?> entries(@PathVariable("username") String username){
         try {
             return diaryServices.getEntriesFor(username);
         }catch (DiaryException e){
             return List.of(e.getMessage());
         }
     }
-    @GetMapping("getEntry/{username}")
-    public String entry(String id, @PathVariable String username){
+    @GetMapping("/get-all-entries")
+    public List<?> allEntries(){
+        try{
+            return diaryServices.FindAllEntries();
+        }catch (DiaryException e){
+            return List.of(e.getMessage());
+        }
+    }
+    @GetMapping("/get-entry/{username}/{id}")
+    public String entry(@PathVariable("id") String id, @PathVariable("username") String username){
         try {
             return String.valueOf(diaryServices.getEntryWith(id,username));
         }catch (DiaryException e){

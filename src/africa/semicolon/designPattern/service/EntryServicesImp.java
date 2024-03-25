@@ -28,6 +28,7 @@ public class EntryServicesImp implements EntryServices{
     @Override
     public List<Entry> getEntriesFor(String username) {
         List<Entry> entries = entryRepo.findByAuthor(username);
+        entryRepo.findAll().forEach(entry -> {{if(entry.getAuthor().equals(username)) entries.add(entry);}});
         if (entries.isEmpty()) throw new EmptyEntryException("No entry found");
 
         return entries;
@@ -39,5 +40,10 @@ public class EntryServicesImp implements EntryServices{
         if(entry.isEmpty()) throw new EntryNotFoundException("Entry not found");
 
         return entry.get();
+    }
+
+    @Override
+    public List<Entry> findAllEntries() {
+        return entryRepo.findAll();
     }
 }

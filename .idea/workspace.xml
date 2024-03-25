@@ -4,52 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c29c40bb-38bc-4505-a2c2-74743d3f4334" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/africa/semicolon/designPattern/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/africa/semicolon/designPattern/data/model/Diary.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/africa/semicolon/designPattern/data/model/Entry.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/africa/semicolon/designPattern/data/repository/DiaryRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/africa/semicolon/designPattern/dtos/requests/CreateEntryRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/africa/semicolon/designPattern/dtos/requests/DeleteRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/africa/semicolon/designPattern/dtos/requests/LoginRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/africa/semicolon/designPattern/dtos/requests/RegisterRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/africa/semicolon/designPattern/dtos/requests/UpdateEntryRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="c29c40bb-38bc-4505-a2c2-74743d3f4334" name="Changes" comment="commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/designPattern.iml" beforeDir="false" afterPath="$PROJECT_DIR$/designPattern.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/DiaryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/africa/semicolon/designPattern/controllers/DiaryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/model/Diary.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/model/Entry.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/repository/DiaryRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/repository/DiaryRepositoryImp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/repository/EntryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/africa/semicolon/designPattern/data/repository/EntryRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/repository/EntryRepositoryImp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dtos/requests/CreateEntryRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dtos/requests/DeleteRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dtos/requests/LoginRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dtos/requests/RegisterRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dtos/requests/UpdateEntryRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exceptions/DiaryException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/africa/semicolon/designPattern/exceptions/DiaryException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exceptions/DiaryLockedException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/africa/semicolon/designPattern/exceptions/DiaryLockedException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exceptions/EmptyEntryException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/africa/semicolon/designPattern/exceptions/EmptyEntryException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exceptions/EntryNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/africa/semicolon/designPattern/exceptions/EntryNotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exceptions/IncorrectPasswordException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/africa/semicolon/designPattern/exceptions/IncorrectPasswordException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exceptions/UserAlreadyExistException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/africa/semicolon/designPattern/exceptions/UserAlreadyExistException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exceptions/UserNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/africa/semicolon/designPattern/exceptions/UserNotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/DiaryServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/africa/semicolon/designPattern/service/DiaryServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/DiaryServicesImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/africa/semicolon/designPattern/service/DiaryServicesImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/EntryServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/africa/semicolon/designPattern/service/EntryServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/EntryServicesImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/africa/semicolon/designPattern/service/EntryServicesImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/repository/DiaryRepositoryImpTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/repository/DiaryRepositoryImpTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/repository/EntryRepositoryImpTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/repository/EntryRepositoryImpTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/service/DiaryServicesImpTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/africa/semicolon/designPattern/service/DiaryServicesImpTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/africa/semicolon/designPattern/controllers/DiaryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/africa/semicolon/designPattern/controllers/DiaryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/africa/semicolon/designPattern/service/DiaryServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/africa/semicolon/designPattern/service/DiaryServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/africa/semicolon/designPattern/service/DiaryServicesImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/africa/semicolon/designPattern/service/DiaryServicesImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/africa/semicolon/designPattern/service/EntryServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/africa/semicolon/designPattern/service/EntryServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/africa/semicolon/designPattern/service/EntryServicesImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/africa/semicolon/designPattern/service/EntryServicesImp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +21,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="HTTP Public Environment File" />
       </list>
     </option>
   </component>
@@ -84,11 +46,21 @@
   "keyToString": {
     "Downloaded.Files.Path.Enabled": "false",
     "HTTP Request.generated-requests | #1.executor": "Run",
+    "HTTP Request.generated-requests | #11.executor": "Run",
+    "HTTP Request.generated-requests | #13.executor": "Run",
+    "HTTP Request.generated-requests | #15.executor": "Run",
+    "HTTP Request.generated-requests | #16.executor": "Run",
+    "HTTP Request.generated-requests | #17.executor": "Run",
     "HTTP Request.generated-requests | #2.executor": "Run",
     "HTTP Request.generated-requests | #3.executor": "Run",
     "HTTP Request.generated-requests | #4.executor": "Run",
     "HTTP Request.generated-requests | #5.executor": "Run",
     "HTTP Request.generated-requests | #6.executor": "Run",
+    "HTTP Request.generated-requests | #7.executor": "Run",
+    "HTTP Request.generated-requests | #8.executor": "Run",
+    "HTTP Request.generated-requests | #9.executor": "Run",
+    "HTTP Request.http-requests-log | #1.executor": "Run",
+    "HTTP Request.http-requests-log | #8.executor": "Run",
     "JUnit.DiaryRepositoryImpTest.executor": "Run",
     "JUnit.DiaryServicesImpTest.EntryCanUpdateTest.executor": "Run",
     "JUnit.DiaryServicesImpTest.aUserCanCreateAnEntryTest.executor": "Run",
@@ -128,19 +100,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="HTTP Request.generated-requests | #6">
-    <configuration name="generated-requests | #2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="2" requestIdentifier="#2" runType="Run single request">
-      <method v="2" />
-    </configuration>
-    <configuration name="generated-requests | #4" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="4" requestIdentifier="#4" runType="Run single request">
-      <method v="2" />
-    </configuration>
-    <configuration name="generated-requests | #5" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="5" requestIdentifier="#5" runType="Run single request">
-      <method v="2" />
-    </configuration>
-    <configuration name="generated-requests | #6" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="6" requestIdentifier="#6" runType="Run single request">
-      <method v="2" />
-    </configuration>
+  <component name="RunManager">
     <configuration name="Main" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="designPattern" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="africa.semicolon.designPattern.Main" />
@@ -156,11 +116,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="HTTP Request.generated-requests | #6" />
         <item itemvalue="Spring Boot.Main" />
-        <item itemvalue="HTTP Request.generated-requests | #5" />
-        <item itemvalue="HTTP Request.generated-requests | #4" />
-        <item itemvalue="HTTP Request.generated-requests | #2" />
       </list>
     </recent_temporary>
   </component>
@@ -174,11 +130,36 @@
       <updated>1711095176191</updated>
       <workItem from="1711095177920" duration="43000" />
       <workItem from="1711095228085" duration="1469000" />
-      <workItem from="1711101156690" duration="18508000" />
+      <workItem from="1711101156690" duration="19661000" />
+      <workItem from="1711231677253" duration="13791000" />
     </task>
+    <task id="LOCAL-00001" summary="commit">
+      <option name="closed" value="true" />
+      <created>1711228192212</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1711228192212</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit" />
   </component>
 </project>

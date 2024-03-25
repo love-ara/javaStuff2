@@ -8,4 +8,5 @@ public interface EntryServices {
     void delete(String id);
     List<Entry> getEntriesFor(String username);
     Entry getEntryWith(String id);
+    List<Entry> findAllEntries();
 }

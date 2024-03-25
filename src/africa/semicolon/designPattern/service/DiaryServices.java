@@ -23,6 +23,7 @@ public interface DiaryServices {
 
     void updateEntryWith(UpdateEntryRequest updateEntryRequest);
     void delete(String id, String username);
+    List<Entry> FindAllEntries();
     List<Entry> getEntriesFor(String username);
     Entry getEntryWith(String id, String username);
 }
