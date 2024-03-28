@@ -72,4 +72,8 @@ public class TurtleTest {
         turtle.move(4);
         assertEquals(new Position(0, 3), turtle.getCurrentPosition());
     }
+    @Test
+    public void turtleCanMoveEastWardTest(){
+
+    }
 }
