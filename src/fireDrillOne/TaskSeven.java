@@ -17,7 +17,7 @@ public class TaskSeven {
                 }
             }
             if(index%4 == 0){
-                System.out.print(sum + " ");
+                System.out.printf("%s ", sum);
                 multiple = 1;
                 sum = 0;
             }
