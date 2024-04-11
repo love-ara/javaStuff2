@@ -19,5 +19,10 @@ public class DiffTest {
         int[] arr = {2, 1, 3, 4, 9};
         int[] expected = {8};
         assertArrayEquals(expected,diff.getDiff(arr));
+        int[] arr2 = {1, 1, 3, 4, 7};
+        int[] expected2 = {6};
+        assertArrayEquals(expected2,diff.getDiff(arr2));
+
+
     }
 }
