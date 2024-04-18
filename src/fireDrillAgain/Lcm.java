@@ -1,5 +1,6 @@
 package fireDrillAgain;
 
+// i tried get hcf and lcm
 public class Lcm {
 
     private static int lcm(int a, int b) {
