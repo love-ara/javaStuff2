@@ -3,6 +3,15 @@ package fireDrillAgain;
 // i tried get hcf and lcm
 public class Lcm {
 
+    static int[] lcm(int... numbers) {
+        int result = numbers[0];
+        for (int i = 1; i < numbers.length; i++) {
+            result = lcm(result, numbers[i]);
+        }
+        return new int[]{result};
+    }
+
+
     private static int lcm(int a, int b) {
         return a * (b / gcd(a, b));
     }
@@ -15,10 +24,11 @@ public class Lcm {
         return a;
     }
 
-    static int[] lcm(int... numbers) {
+
+    public static int[] hcf(int... numbers) {
         int result = numbers[0];
         for (int i = 1; i < numbers.length; i++) {
-            result = lcm(result, numbers[i]);
+            result = gcdHcf(result, numbers[i]);
         }
         return new int[]{result};
     }
@@ -30,13 +40,6 @@ public class Lcm {
             a = temp;
         }
         return a;
-    }
-    public static int[] hcf(int... numbers) {
-        int result = numbers[0];
-        for (int i = 1; i < numbers.length; i++) {
-            result = gcdHcf(result, numbers[i]);
-        }
-        return new int[]{result};
     }
 
 
