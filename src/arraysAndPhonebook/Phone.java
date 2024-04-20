@@ -50,7 +50,7 @@ public class Phone {
                 back();
                 break;
             default:
-                System.out.println("You are a FOOL!!!!");
+                System.out.println("Nothing here");
         }
     }
     private static void input() {
