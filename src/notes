@@ -1,0 +1,66 @@
+
+1. Runnable And Callable interfaces
+Runnable and callable are interfaces in Java used for defining tasks that can be executed by threads.
+
+-Runnable is a functional interface with a single abstract method. it is commonly used for tasks that do not return a
+value and can not try a checked exception. Example:
+Runnable runnable = () -> System.out.println("Hello from Runnable);
+Thread thread = new Thread(runnable);
+thread.start();
+-Callable is a function interface that can return a value and throw a checked exception.
+Example:
+Callable<String> callable = ()-> "Hello from Callable!";
+ExecutorService executor = Executors.newSingleThreadExecutor();
+Future<String> future = executor.submit(callable);
+String result = future.get();
+System.out.println(result);
+executor.shutdown();
+
+
+2. OOP
+-Composition:
+*composition is a strong form of association where a class owns another class,
+and the lifetime of the owned object depends on the lifetime of the owner object.
+*"part-of" relationship
+*one-to-more, many-to-one relationship
+usage -> when one object is part of another object and cannot exist independently.
+
+-Aggregation:
+*A form of association where one class contains another class.
+*the contained class can exist independently of the container class.
+*"Has-a" relationship
+*Weak association
+usage -> used when one object "has-a" relationship with another object but does not own it.
+
+
+-Association:
+*relationship btw two different objects/instance of classes.
+*it can be one-to-one, one-to-many, or many-to-many
+*forms are Composition and Aggregation.
+
+usage -> used to model relationship btw entities in a system.
+
+-Cohesion:
+*Measures how closely related and focused the responsibilities of a class or module are.
+*it is concern with relationships within a module.
+*High cohesion indicates that a class/module has a single, well-defined purpose
+*Low cohesion indicates that it performs multiple unrelated tasks.
+usage-> Used to ensure that a class/module has a single, well-defined purpose and its members are closely related.
+
+
+-Coupling:
+*indicates the degree of interdependence btw classes/modules.
+*it concerns relationships btw modules.
+*Low coupling: Classes are independent and changes in one class does not affect other classes.
+*High coupling: indicates strong interdependence btw classes.
+
+usage-> used to ensure that classes are loosely coupled, making the system easier to maintain, extend and test.
+
+-Delegation:
+*A design pattern where an object forwards a method call to another object to perform the actual task.
+*Allows for code reuse and modularity.
+usage-> used to separate responsibilities and promote modular design by delegating tasks to appropriate objects.
+
+
+
+
