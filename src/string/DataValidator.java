@@ -15,4 +15,5 @@ public class DataValidator {
     private static  boolean isPhoneNumberWithValidCountryCode(String phoneNumber) {
         return phoneNumber.startsWith("+234-");
     }
+
 }

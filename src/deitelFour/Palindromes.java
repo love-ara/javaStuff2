@@ -23,12 +23,12 @@ public class Palindromes {
         int fourthNum = rem2/10;
         int lastNum = aDigit%10;
 
-        String newDigit = "" + lastNum + fourthNum + thirdNum + secondNum + firstNum;
+        String newDigit = STR."\{lastNum}\{fourthNum}\{thirdNum}\{secondNum}\{firstNum}";
         System.out.println(newDigit);
         if(fiveDigit.equals(newDigit)) {
-            System.out.print(fiveDigit + " is a palindrome");
-        }else if(fiveDigit!=newDigit) {
-            System.out.print(fiveDigit + " is not a palindrome");
+            System.out.print(STR."\{fiveDigit} is a palindrome");
+        }else {
+            System.out.print(STR."\{fiveDigit} is not a palindrome");
         }
 
 
