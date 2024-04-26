@@ -49,5 +49,49 @@ Block elements: <p> and <div> tags are block level element that occurs the whole
 Inline elements: 
 HTML form: is used to collect user input.
 label tag: <label >
-input tag: has an attribute called type used to specify the type i.e radio <input type="radio">
+input tag: has an attribute called type used to specify the type i.e. radio <input type="radio">
 form tag: <form> 
+
+
+NavBar: has a structure with an icon with name
+filledButton: filled with color i.e. signup button.
+
+
+Css:Cascading style sheet
+css selector: used to select the content you want to style
+Element selector selects elements by name.
+
+1. # is used to select id
+2. element selector : call the name of element
+3. > is a pointer in css
+4. . is the class selector
+5. * universal selector
+6. grouping selector: uses commas to group ta
+
+
+Css colour
+rgb
+
+opacity/transparency: 0.0 - 1.0
+
+css background color: background-colour
+css background repeat: repeat X
+translate: 
+css background image:
+
+
+Styles:
+
+Display: flex
+
+
+margin: outside space
+paddling: inside space
+gap : space btw items
+
+
+div
+img tag,
+h2,
+p 
+button
