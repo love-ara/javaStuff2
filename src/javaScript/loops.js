@@ -1,15 +1,15 @@
-//
-// let user = {
-//     firstName : "Ara",
-//     lastName : "Ara",
-//     age : 2,
-//     sex: "female"
-// }
-//
-// //for/in loop
-// for( const key in user ) {
-//     console.log(user[key])
-// }
+
+let user = {
+    firstName : "Ara",
+    lastName : "Ara",
+    age : 2,
+    sex: "female"
+}
+
+//for/in loop
+for( const key in user ) {
+    console.log(user[key])
+}
 //
 
 // let arr = [1, 3, 4, 5,6]
