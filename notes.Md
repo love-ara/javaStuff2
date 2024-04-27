@@ -94,4 +94,6 @@ div
 img tag,
 h2,
 p 
-button
+button:
+ghost button
+filled button 
