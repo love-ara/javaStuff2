@@ -19,18 +19,9 @@ public class HugeInteger {
     }
 
 
-
-
-
-
-
-
-
-
-
-    public HugeInteger add(HugeInteger val) {
+    public HugeInteger add(HugeInteger firstValue) {
         HugeInteger val1 = new HugeInteger(toString());
-        HugeInteger val2 = new HugeInteger(val.toString());
+        HugeInteger val2 = new HugeInteger(firstValue.toString());
         HugeInteger result = new HugeInteger();
 
         if (val1.sign == 1 && val2.sign == -1)
@@ -41,14 +32,14 @@ public class HugeInteger {
             return result;
         }
 
-        int up = 0;
+        int sumUp = 0;
 
         for (int i = 0; i < MAX_DIGITS; i++) {
-            int number = this.getDigit(i) + val.getDigit(i) + up;
+            int number = this.getDigit(i) + firstValue.getDigit(i) + sumUp;
 
             result.setDigit(i, number % 10);
 
-            up = number / 10;
+            sumUp = number / 10;
         }
 
         result.findDigit();
@@ -114,11 +105,11 @@ public class HugeInteger {
         } else
             classIndex = len - 1;
 
-        for (int i = 0; i < len; i++) {
-            char digit = number.charAt(len - i - 1);
+        for (int index = 0; index < len; index++) {
+            char digit = number.charAt(len - index - 1);
 
             if (Character.isDigit(digit))
-                digits[i] = digit - '0';
+                digits[index] = digit - '0';
         }
         return digits;
     }
@@ -142,18 +133,6 @@ public class HugeInteger {
 
         return integer.toString();
     }
-
-
-
-    private boolean isZero() {
-        for (int index = 0; index < MAX_DIGITS; index++) {
-            if (digits[index] == 0) {
-                return true;
-            }
-        }
-        return false;
-    }
-
 
 
     public boolean isEqual(HugeInteger others) {
