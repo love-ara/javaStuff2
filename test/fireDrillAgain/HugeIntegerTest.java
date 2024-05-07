@@ -99,7 +99,7 @@ public class HugeIntegerTest {
         assertTrue(diff);
     }
 
-     @Test
+    @Test
     public void methodIsLesserThanOrEqualToTest(){
         HugeInteger hugeInteger = new HugeInteger();
         HugeInteger hugeInteger2 = new HugeInteger();
@@ -108,6 +108,28 @@ public class HugeIntegerTest {
         boolean diff = hugeInteger.isLesserThanOrEqualTo(hugeInteger2);
        assertTrue(diff);
     }
+    @Test
+    public void methodIsZeroTest(){
+        HugeInteger hugeInteger = new HugeInteger();
+        HugeInteger hugeInteger2 = new HugeInteger();
+        hugeInteger.parse("0");
+        hugeInteger2.parse("0");
+        boolean isZero = hugeInteger.isZero(hugeInteger2);
+       assertTrue(isZero);
+    }
+    @Test
+    public void methodMultiplyTest(){
+        HugeInteger hugeInteger = new HugeInteger();
+        HugeInteger hugeInteger2 = new HugeInteger();
+        hugeInteger.parse("123456");
+        hugeInteger2.parse("123456");
+        String expected = "15241383936";
+        BigInteger bigInteger = new BigInteger("123456");
+        System.out.println(bigInteger.multiply(BigInteger.valueOf(Long.parseLong("123456"))));
+        HugeInteger product = hugeInteger.multiply(hugeInteger2);
+       assertEquals(expected, product.toString());
+    }
+
 
 
 

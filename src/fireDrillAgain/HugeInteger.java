@@ -34,10 +34,10 @@ public class HugeInteger {
 
         int sumUp = 0;
 
-        for (int i = 0; i < MAX_DIGITS; i++) {
-            int number = this.getDigit(i) + firstValue.getDigit(i) + sumUp;
+        for (int index = 0; index < MAX_DIGITS; index++) {
+            int number = this.getDigit(index) + firstValue.getDigit(index) + sumUp;
 
-            result.setDigit(i, number % 10);
+            result.setDigit(index, number % 10);
 
             sumUp = number / 10;
         }
@@ -52,11 +52,11 @@ public class HugeInteger {
         HugeInteger val2 = new HugeInteger(integer.toString());
         HugeInteger result = new HugeInteger();
 
-        for (int i = 0; i < MAX_DIGITS; i++) {
-            int number = val1.getDigit(i) - val2.getDigit(i);
+        for (int index = 0; index < MAX_DIGITS; index++) {
+            int number = val1.getDigit(index) - val2.getDigit(index);
 
             if (number < 0) {
-                int proxIndex = i + 1;
+                int proxIndex = index + 1;
 
                 while (val1.getDigit(proxIndex) == 0 && proxIndex < val1.classIndex)
                     proxIndex++;
@@ -64,19 +64,19 @@ public class HugeInteger {
                 if (proxIndex <= val1.classIndex) {
                     val1.setDigit(proxIndex, val1.getDigit(proxIndex) - 1);
 
-                    while (--proxIndex > i)
+                    while (--proxIndex > index)
                         val1.setDigit(proxIndex, 9);
 
-                    val1.setDigit(i, val1.getDigit(i) + 10);
+                    val1.setDigit(index, val1.getDigit(index) + 10);
 
-                    number = val1.getDigit(i) - val2.getDigit(i);
+                    number = val1.getDigit(index) - val2.getDigit(index);
                 } else {
-                    number = val2.getDigit(i) - val1.getDigit(i);
+                    number = val2.getDigit(index) - val1.getDigit(index);
                     sign = -1;
                 }
             }
 
-            result.setDigit(i, number % 10);
+            result.setDigit(index, number % 10);
         }
 
         result.findDigit();
@@ -128,8 +128,8 @@ public class HugeInteger {
     public String toString() {
         StringBuilder integer = new StringBuilder(sign < 0 ? "-" : "");
 
-        for (int i = classIndex; i >= 0; i--)
-            integer.append(digits[i]);
+        for (int index = classIndex; index >= 0; index--)
+            integer.append(digits[index]);
 
         return integer.toString();
     }
@@ -155,6 +155,10 @@ public class HugeInteger {
     boolean isLesserThanOrEqualTo(HugeInteger other) {
         return compareTo(other) <= 0;
     }
+    boolean isZero(HugeInteger other) {
+        return compareTo(other) == 0;
+    }
+
 
 
     private int compareTo(HugeInteger other) {
@@ -167,5 +171,44 @@ public class HugeInteger {
         }
         return 0;
     }
+
+    public HugeInteger multiply(HugeInteger firstValue) {
+        HugeInteger val1 = new HugeInteger(toString());
+        HugeInteger val2 = new HugeInteger(firstValue.toString());
+        HugeInteger result = new HugeInteger();
+
+        for (int index = 0; index < MAX_DIGITS; index++) {
+            int number = val1.getDigit(index) * val2.getDigit(index);
+
+            if (number < 0) {
+                int proxIndex = index + 1;
+
+                while (val1.getDigit(proxIndex) == 0 && proxIndex < val1.classIndex)
+                    proxIndex++;
+
+                if (proxIndex <= val1.classIndex) {
+                    val1.setDigit(proxIndex, val1.getDigit(proxIndex) - 1);
+
+                    while (--proxIndex > index)
+                        val1.setDigit(proxIndex, 9);
+
+                    val1.setDigit(index, val1.getDigit(index) + 10);
+
+                    number = val1.getDigit(index) * val2.getDigit(index);
+                } else {
+                    number = val2.getDigit(index) * val1.getDigit(index);
+                    sign = -1;
+                }
+            }
+
+            result.setDigit(index, number % 10);
+        }
+
+        result.findDigit();
+
+        return result;
+
+        }
 }
+
 

@@ -3,33 +3,67 @@ package fireDrillAgain;
 
 public class CaesarCipher {
 
-    public  String encrypt(String plaintext, int shift) {
-        StringBuilder ciphertext = new StringBuilder();
+    public  String encrypt(String input, int shift) {
+        StringBuilder result = new StringBuilder();
 
-        for (int i = 0; i < plaintext.length(); i++) {
-            char ch = plaintext.charAt(i);
+//        for (int i = 0; i < input.length(); i++) {
+//            char ch = input.charAt(i);
+//            if (Character.isLetter(ch)) {
+//                char base = Character.isUpperCase(ch) ? 'A' : 'a';
+//                char shiftedChar = (char) ((ch - base + shift) % 26 + base);
+//                result.append(shiftedChar);
+//            } else {
+//                result.append(ch);
+//            }
+//        }
 
-            if (ch == ' ') {
-                ciphertext.append(ch);
+        for (char c : input.toCharArray()) {
+            if (!Character.isLetter(c)) {
+                result.append(c);
                 continue;
             }
 
-            if (Character.isUpperCase(ch)) {
-                char encryptedChar = (char) ((ch + shift - 'A') % 26 + 'A');
-                ciphertext.append(encryptedChar);
-            }
-            else if (Character.isLowerCase(ch)) {
-                char encryptedChar = (char) ((ch + shift - 'a') % 26 + 'a');
-                ciphertext.append(encryptedChar);
-            }
-            else {
-                ciphertext.append(ch);
-            }
+            int unicodeValue = c;
+            boolean condition = (Character.isLowerCase(c) && unicodeValue + shift > 'z')
+                    || (Character.isUpperCase(c) && unicodeValue + shift > 'Z');
+            unicodeValue = condition ? (unicodeValue + shift) - 26 : unicodeValue + shift;
+            result.appendCodePoint(unicodeValue);
         }
 
-        return ciphertext.toString();
+        return result.toString();
     }
+
+    public String decrypt(String input, int shift) {
+        StringBuilder result = new StringBuilder();
+//        for (int i = 0; i < input.length(); i++) {
+//            char ch = input.charAt(i);
+//            if (Character.isLetter(ch)) {
+//                char base = Character.isUpperCase(ch) ? 'A' : 'a';
+//                char shiftedChar = (char) ((ch - shift + base) % 26 + base);
+//                result.append(shiftedChar);
+//            }else {
+//                result.append(ch);
+//            }
+//        }
+
+        for (char c : input.toCharArray()) {
+            if (!Character.isLetter(c)) {
+                result.append(c);
+                continue;
+            }
+
+            int unicodeValue = c;
+            boolean condition = (Character.isLowerCase(c) && unicodeValue - shift < 'a')
+                    || (Character.isUpperCase(c) && unicodeValue - shift < 'A');
+            unicodeValue = condition ? (26 + unicodeValue) - shift : unicodeValue -  shift;
+            result.appendCodePoint(unicodeValue);
+        }
+
+        return result.toString();
+    }
+
 }
+
 
 
 
