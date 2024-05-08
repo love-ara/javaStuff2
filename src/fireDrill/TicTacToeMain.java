@@ -3,7 +3,7 @@ package fireDrill;
 import javax.swing.*;
 
 public class TicTacToeMain {
-    private static TicTacToe game = new TicTacToe();
+    private static final TicTacToe game = new TicTacToe();
 
     public static void main(String[] args) {
         play();
@@ -16,7 +16,7 @@ public class TicTacToeMain {
             try {
 
                 print(game.displayBoard(), "board");
-                print("It' s your turn, Player " + game.currentPlayer().name(), "turn");
+                print(STR."It' s your turn, Player \{game.currentPlayer().name()}", "turn");
                 String  payerMove = input("Enter your move (1-9): ");
                 int move = Integer.parseInt(payerMove);
 
@@ -33,7 +33,7 @@ public class TicTacToeMain {
         if(game.isWin()){
             CellType winner;
             winner = game.currentPlayer() == CellType.X? CellType.O : CellType.X;
-            print( "Player " + winner + " Wins!", "Winner");
+            print(STR."Player \{winner} Wins!", "Winner");
         }else{
             print("It's a draw!", "Tie!");
         }

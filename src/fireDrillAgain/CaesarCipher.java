@@ -35,16 +35,6 @@ public class CaesarCipher {
 
     public String decrypt(String input, int shift) {
         StringBuilder result = new StringBuilder();
-//        for (int i = 0; i < input.length(); i++) {
-//            char ch = input.charAt(i);
-//            if (Character.isLetter(ch)) {
-//                char base = Character.isUpperCase(ch) ? 'A' : 'a';
-//                char shiftedChar = (char) ((ch - shift + base) % 26 + base);
-//                result.append(shiftedChar);
-//            }else {
-//                result.append(ch);
-//            }
-//        }
 
         for (char c : input.toCharArray()) {
             if (!Character.isLetter(c)) {

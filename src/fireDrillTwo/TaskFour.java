@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class TaskFour {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        int scores = 0;
+        int scores;
         int sum = 0;
         double average = 0.0;
         for(int index = 1; index <= 10; index++){
@@ -14,11 +14,10 @@ public class TaskFour {
             if(index % 2 == 0){
             sum+= scores;
             }
-            average = sum / 2;
+            System.out.println(sum);
+            average = (double) sum / 2;
         }
-       // System.out.println("Sum =" + sum);
-        System.out.println("Sum of even indexes=" + sum);
+        System.out.printf("Sum of even indexes = %f", average);
 
-       // System.out.print("Average =" + average);
     }
 }

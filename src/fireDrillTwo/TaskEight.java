@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 public class TaskEight {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        int scores = 0;
+        var input = new Scanner(System.in);
+        int scores;
         int sum = 0;
         double average = 0.0;
 
@@ -20,10 +20,8 @@ public class TaskEight {
                 scores = input.nextInt();
             }
             sum += scores;
-            // average = sum / 2;
         }
-        System.out.println("Sum of numbers= " + sum);
-        System.out.println("Average of even number =  " + average);
-        //System.out.print("Average =" + average);
+        System.out.printf("Sum of numbers= %d", sum);
+        System.out.printf("Average of even number = %f", average);
     }
 }
