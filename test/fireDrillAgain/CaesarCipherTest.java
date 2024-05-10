@@ -33,13 +33,13 @@ public class CaesarCipherTest {
     @Test
     public void decryptTest(){
         CaesarCipher cipher = new CaesarCipher();
-        String expected = "THE QUI@K ?ROWN FOX JUMPS OVER THE L>ZY DOG";
+        String expected = "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG";
         String expected1 = "ATTACKATONCE";
         String expected2 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        String plainText = "QEB NRF@H ?OLTK CLU GRJMP LSBO QEB I>WV ALD";
+        String plainText = "QEB NRFZH YOLTK CLU GRJMP LSBO QEB IXWV ALD";
         String plainText1 = "EXXEGOEXSRGI";
         String plainText2 = "XYZABCDEFGHIJKLMNOPQRSTUVW";
-        String actual = cipher.decrypt(plainText, -3);
+        String actual = cipher.decrypt(plainText, 23);
         String actual1 = cipher.decrypt(plainText1, 4);
         String actual2 = cipher.decrypt(plainText2, 23);
 

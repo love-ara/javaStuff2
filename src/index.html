@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Multi-Page HTML</title>
+    <style>
+        /* Optional CSS to add smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Hide all sections by default */
+        section {
+            display: none;
+        }
+
+        /* Show active section */
+        section.active {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+<nav>
+    <ul>
+        <li><a href="#section1" onclick="showSection('section1')">Page 1</a></li>
+        <li><a href="#section2" onclick="showSection('section2')">Page 2</a></li>
+        <li><a href="#section3" onclick="showSection('section3')">Page 3</a></li>
+    </ul>
+</nav>
+
+<section id="section1" class="active">
+    <h2>Page 1</h2>
+    <p>This is Page 1.</p>
+</section>
+
+<section id="section2">
+    <h2>Page 2</h2>
+    <p>This is Page 2.</p>
+</section>
+
+<section id="section3">
+    <h2>Page 3</h2>
+    <p>This is Page 3.</p>
+</section>
+
+<script>
+    function showSection(sectionID) {
+        // Hide all sections
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.remove('active');
+        });
+
+        // Show the selected section
+        document.getElementById(sectionID).classList.add('active');
+    }
+</script>
+</body>
+
+</html>

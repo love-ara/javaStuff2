@@ -12,11 +12,13 @@ public class Sorting {
                         int temp = arr[i];
                         arr[i] = arr[j];
                         arr[j] = temp;
+                    }if (arr[i]%2 !=0 && arr[j]%2 ==0) {
+                        int temp = arr[j];
+                        arr[j] = arr[i];
+                        arr[i] = temp;
                     }
 
-                    } else if(i%2!= 0) {
-
-            }
+                }
             }
         }
         System.out.println(Arrays.toString(arr));
