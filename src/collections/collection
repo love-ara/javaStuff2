@@ -1,0 +1,10 @@
+1. Generic collections
+2. Collections Framework
+collections is interface  ----> a) List :ArrayList
+                 b) Set : 1. sorted set--> treeSet 2. hashSet
+                 c) Queue : priorityQueue
+Map(is part of collection framework but not a single element collection)
+Comparable defines the natural order
+comparator is used to customs order
+Autoboxing -> conversion of a primitive type value to its equivalent wrapper/reference type.
+Auto-unboxing -> conversion of a wrapper/reference type value to its equivalent/corresponding primitive type(implicitly done by the jvm)
