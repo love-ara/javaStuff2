@@ -12,7 +12,8 @@ class AbsoluteTest {
         int x= 3;
         int y= 2;
         int expected = 2;
-        assertEquals(expected, absolute.absol(arr, x, y));
+        assertEquals(expected, absolute.abs(arr, x, y));
     }
 
 }
+

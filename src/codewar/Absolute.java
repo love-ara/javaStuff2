@@ -1,10 +1,11 @@
+
 package codewar;
 
 
 
 public class Absolute {
 
-    public int absol(int[] arr, int x, int y) {
+    public int abs(int[] arr, int x, int y) {
         String s = "";
         for (int num : arr) {
             s += num;
@@ -18,5 +19,21 @@ public class Absolute {
         return diff < 0 ? diff * -1 : diff;
     }
 
+    public static int findMinAbsDifferenceOf(int x, int y, int... numbers) {
+        int xIndex = -1;
+        int yIndex = -1;
+        int difference = Integer.MAX_VALUE;
+        int min = Integer.MAX_VALUE;
 
+        for (int index = 0; index < numbers.length; index++) {
+            xIndex = numbers[index] == x ? index : xIndex;
+            yIndex = numbers[index] == y ? index : yIndex;
+
+            if (xIndex != -1 && yIndex != -1) difference = Math.abs(xIndex - yIndex);
+            if (difference < min) min = difference;
+        }
+
+        return min;
     }
+
+}
