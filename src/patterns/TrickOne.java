@@ -16,6 +16,18 @@ public class TrickOne {
     }
 
     private static void patternEight(int n) {
+        for(int row = 0; row <= n; row++) {
+            int noOfSpaces = n - row;
+            for(int spaces = 0; spaces < noOfSpaces; spaces++) {
+                System.out.print(" ");
+            }
+            for(int col = 0; col <= n; col++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+
+        }
+
 
     }
 
