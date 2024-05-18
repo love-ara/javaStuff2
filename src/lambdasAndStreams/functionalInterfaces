@@ -1,0 +1,13 @@
+Functional interface: must have only one abstract method.
+The functional interface is an interface that contains only one abstract method. You can use lambda expressions to create instances of this interface.
+
+public interface name{
+   public abstract returnType methodName(Optional parameters);
+}
+
+The @FunctionalInterface annotation is an annotation in the Java Lang package that is used to identify an interface as a functional interface.
+
+@FunctionalInterface
+public interface MyFunctionalInterface {
+    public abstract void method();
+}
