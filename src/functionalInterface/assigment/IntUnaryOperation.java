@@ -1,4 +1,4 @@
-package functionalInterface;
+package functionalInterface.assigment;
 
 import java.util.function.IntUnaryOperator;
 
